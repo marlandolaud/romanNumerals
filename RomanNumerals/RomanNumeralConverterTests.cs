@@ -52,19 +52,19 @@ namespace RomanNumerals
             Assert.Throws<InvalidOperationException>(() => target.ConvertToInt(input));
         }
 
-        public static Dictionary ValidData => new List<Tuple<string, int>>
+        public static IEnumerable<object[]> ValidData => new List<object[]>
         {
-            { "", 0 },
-            { "   ", 0 },
-            { "I", 1 },
-            { "II", 2},
-            { "III", 3},
-            { "IV", 4},
-            { "V", 5},
-            { "DCXLVIII", 648},
-            { "XXVI", 26 },
-            { "XXXIX", 39 },
-            { "XCIX", 99 },           
+            new object[] { "", 0 },
+            new object[] { "   ", 0 },
+            new object[] { "I", 1 },
+            new object[] { "II", 2},
+            new object[] { "III", 3},
+            new object[] { "IV", 4},
+            new object[] { "V", 5},
+            new object[] { "DCXLVIII", 648},
+            new object[] { "XXVI", 26 },
+            new object[] { "XXXIX", 39 },
+            new object[] { "XCIX", 99 },           
         };
 
         [Theory]
